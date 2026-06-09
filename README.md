@@ -16,20 +16,71 @@ An AI-powered Resume Analyzer built using Python and Streamlit.
 - Resume Recommendations
 - PDF Report Download
 
-## Technologies Used
+# 🛠️ Tech Stack
+
+### Frontend
+
+- Streamlit
+
+### Backend
 
 - Python
-- Streamlit
+
+### NLP
+
 - SpaCy
+- Regular Expressions
+
+### Data Processing
+
+- Pandas
+- NumPy
+
+### Resume Parsing
+
 - PDFPlumber
-- Scikit-learn
+- python-docx
+
+### Reporting
+
 - ReportLab
 
-## Installation
+# 🏗️ Project Architecture
 
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+```text
+                ┌─────────────────┐
+                │ Resume PDF      │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ PDF Parser      │
+                └────────┬────────┘
+                         │
+                         ▼
+                ┌─────────────────┐
+                │ Text Extraction │
+                └────────┬────────┘
+                         │
+       ┌─────────────────┼─────────────────┐
+       ▼                 ▼                 ▼
+
+┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+│ Skill Engine │ │ ATS Scoring  │ │ JD Matching  │
+└──────┬───────┘ └──────┬───────┘ └──────┬───────┘
+       │                │                │
+       └────────────────┼────────────────┘
+                        ▼
+
+              ┌───────────────────┐
+              │ Recommendation AI │
+              └─────────┬─────────┘
+                        ▼
+
+              ┌───────────────────┐
+              │ PDF Report Export │
+              └───────────────────┘
+```
 
 ### Project Structure
 AI-Resume-Analyzer
@@ -83,3 +134,76 @@ Formatting Score
 - Resume vs JD Semantic Matching
 - ATS Dashboard
 - Resume Improvement Suggestions
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/AI-Resume-Analyzer.git
+```
+
+```bash
+cd AI-Resume-Analyzer
+```
+
+---
+
+## Create Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+```
+
+```bash
+venv\Scripts\activate
+```
+
+### Linux/Mac
+
+```bash
+python3 -m venv venv
+```
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Download SpaCy Model
+
+```bash
+python -m spacy download en_core_web_sm
+```
+
+---
+
+## Run Application
+
+```bash
+streamlit run app.py
+```
+
+---
+# 👩‍💻 Author
+
+**Hitika Vij**
+
+B.Tech CSE (AI & DS)
+
+Passionate about:
+- Artificial Intelligence
+- Machine Learning
+- Data Analytics
+- NLP Applications
